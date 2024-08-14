@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>ملفاتي الشخصية</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">/* styles.css */
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #1abc9c, #3498db);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.links .btn {
+    display: block;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.links .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.twitter { background-color: #1da1f2; }
+.facebook { background-color: #1877F2; }
+.instagram { background: linear-gradient(to bottom right, #F58529, #DD2A7B, #8134AF, #515BD4); }
+.tiktok { background: linear-gradient(to bottom right, #69C9D0, #010101, #EE1D52); }
+.youtube { background-color: #ff0000; }</style></head> 
+ <body> 
+  <div class="container"> 
+   <h1 id="greeting">أهلاً بك في صفحتي!</h1> 
+   <div class="links"> <a href="https://x.com/Smigel_O?t=KsehqKqZ3pgBNe3XfYdB-w&amp;s=09" target="_blank" class="btn twitter">تويتر</a> <a href="https://www.facebook.com/RM.VJ.15?mibextid=ZbWKwL" target="_blank" class="btn facebook">فيسبوك</a> <a href="https://www.instagram.com/smigel0?igsh=MXUxZTg4N3VzenN5aQ==" target="_blank" class="btn instagram">إنستجرام</a> <a href="https://www.tiktok.com/@rm.vj.15?_t=8ooPZY5OOft&amp;_r=1" target="_blank" class="btn tiktok">تيكتوك</a> <a href="https://youtube.com/@smigel0?si=9usM7DA9wT6Fryt8" target="_blank" class="btn youtube">يوتيوب</a> 
+   </div> 
+  </div> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('.btn');
+    const greeting = document.getElementById('greeting');
+    
+    // رسالة ترحيبية عند تحميل الصفحة
+    greeting.innerHTML = "مرحباً بك في موقعي!";
+
+    // تغيير النص عند النقر على الأزرار
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            greeting.innerHTML = `قمت بالنقر على ${button.textContent}!`;
+            setTimeout(() => {
+                greeting.innerHTML = "مرحباً بك في موقعي!";
+            }, 3000);
+        });
+    });
+});</script></body></html>
